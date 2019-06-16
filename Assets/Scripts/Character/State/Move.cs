@@ -17,7 +17,7 @@ public class Move : State
     {
         character.rigidbody.velocity = new Vector3(character.movement * character.speed, character.rigidbody.velocity.y);
     }
-    public override void Iddle() { character.activeState = new Iddle(character); }
-    public override void Jump() { character.activeState = new Jump(character); }
-    public override void Squat() { character.activeState = new Squat(character); }
+    public override void jump() { character.activeState = new Jump(character); }
+    public override void squat() { character.activeState = new Squat(character); }
+    public override void carry() { character.activeState = new Carry(character); }
 }

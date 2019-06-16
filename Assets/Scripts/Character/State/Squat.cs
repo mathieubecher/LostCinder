@@ -17,5 +17,5 @@ public class Squat : State
     {
         return "Squat";
     }
-    public override void Raise() { character.activeState = new Iddle(character); }
+    public override void raise() { character.activeState = new Iddle(character); }
 }

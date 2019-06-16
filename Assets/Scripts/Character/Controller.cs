@@ -7,8 +7,8 @@ public class Controller : MonoBehaviour
 {
     public State activeState;
     public float speed = 0.2f;
-    public float gravity = 20;
     public TextMesh stateName;
+
 
     public LayerMask whatIsGround;
     public GameObject groundCheck;
@@ -17,8 +17,13 @@ public class Controller : MonoBehaviour
     public Rigidbody2D rigidbody;
     public Animator animator;
 
+    public Transform left;
+    public Transform right;
+    public Cinder cinder;
+
     public float movement = 0;
     public bool ground = false;
+    private bool pressDown = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +35,7 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         DetectInput();
         activeState.Update();
 
@@ -45,15 +51,23 @@ public class Controller : MonoBehaviour
         if (movement != 0)
         {
             GetComponent<SpriteRenderer>().flipX = movement < 0;
-            activeState.Move();
         }
-        else activeState.Iddle();
+        if (Input.GetKey(KeyCode.Space)) activeState.jump();
+        if (!ground && rigidbody.velocity.y < 0) activeState.fall();
 
-        if (Input.GetKey(KeyCode.Space)) activeState.Jump();
-        if (!ground && rigidbody.velocity.y < 0) activeState.Fall();
 
-        if (Input.GetKey(KeyCode.S)) activeState.Squat();
-        else activeState.Raise();
+        if (Input.GetKey(KeyCode.S) && !pressDown)
+        {
+            pressDown = true;
+            if (!cinder.detect) activeState.squat();
+            else activeState.carry();
+        }
+
+        else if(!Input.GetKey(KeyCode.S))
+        {
+            pressDown = false;
+            activeState.raise();
+        }
 
     }
 }

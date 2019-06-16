@@ -18,5 +18,6 @@ public class Fall : State
     {
         return "Fall";
     }
+    public override void fall() { }
 
 }

@@ -7,19 +7,25 @@ public class Iddle : State
     public Iddle(Controller character) : base(character)
     {
         character.animator.SetBool("Squat", false);
+        character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }
 
     public override string GetName()
     {
-        return "Iddle";
+        if (character.movement != 0)
+        {
+            return "Move";
+        }
+        else return "Iddle";
     }
 
     public override void Update()
     {
-        character.rigidbody.velocity = new Vector3(0, character.rigidbody.velocity.y);
+        character.stateName.text = GetName();
+        character.rigidbody.velocity = new Vector3(character.movement * character.speed, character.rigidbody.velocity.y);
     }
-
-    public override void Move() { character.activeState = new Move(character); }
-    public override void Jump() { character.activeState = new Jump(character); }
-    public override void Squat() { character.activeState = new Squat(character); }
+    
+    public override void jump() { character.activeState = new Jump(character); }
+    public override void squat() { character.activeState = new Squat(character); }
+    public override void carry() { character.activeState = new Carry(character); }
 }

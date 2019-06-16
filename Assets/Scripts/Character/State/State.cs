@@ -19,11 +19,12 @@ public class State
     }
 
     public virtual void Update() { }
-    public virtual void Move() { }
-    public virtual void Iddle() { }
-    public virtual void Jump() { }
-    public virtual void Squat() { }
-    public virtual void Raise() { }
-    public virtual void Fall() { character.activeState = new Fall(character); }
+    public virtual void move() { }
+    public virtual void iddle() { }
+    public virtual void jump() { }
+    public virtual void squat() { }
+    public virtual void raise() { }
+    public virtual void carry() { }
+    public virtual void fall() { character.activeState = new Fall(character); }
 
 }
