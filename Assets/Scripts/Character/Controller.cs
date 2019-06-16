@@ -37,8 +37,8 @@ public class Controller : MonoBehaviour
     private void DetectInput()
     {
         movement = 0;
-        //ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
-        //Debug.Log(groundCheck.transform.position + " " + ground);
+        ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
+        Debug.Log(groundCheck.transform.position + " " + ground);
         
         if (Input.GetKey(KeyCode.Q)) movement += -1;
         if (Input.GetKey(KeyCode.D)) movement += 1;
@@ -50,7 +50,7 @@ public class Controller : MonoBehaviour
         else activeState.Iddle();
 
         if (Input.GetKey(KeyCode.Space)) activeState.Jump();
-        if (rigidbody.velocity.y < 0) activeState.Fall();
+        if (!ground && rigidbody.velocity.y < 0) activeState.Fall();
 
         if (Input.GetKey(KeyCode.S)) activeState.Squat();
         else activeState.Raise();
