@@ -361,7 +361,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.7096148
+  orthographic size: 5.9198623
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -572,8 +572,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_LinearDrag: 1000000
+  m_AngularDrag: 1000000
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -771,8 +771,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552851320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.099999, y: -4.64, z: -0.9453125}
-  m_LocalScale: {x: 20.32981, y: 1.743559, z: 1}
+  m_LocalPosition: {x: 4.82, y: -4.437, z: -0.9453125}
+  m_LocalScale: {x: 40.009064, y: 0.9328041, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -914,5 +914,5 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
-  m_DampingRatio: 1
-  m_Frequency: 1
+  m_DampingRatio: 0
+  m_Frequency: 6.25
