@@ -19,12 +19,14 @@ public class DetectPlayer : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
-        parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
-        if (parent.character.cinder == null) { 
-            parent.character.cinder = parent;
-            parent.detect = true;
+        if(parent.weight < parent.P3) { 
+            Debug.Log(other.gameObject.name);
+            parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
+            if (parent.character.cinder == null) { 
+                parent.character.cinder = parent;
+                parent.detect = true;
+            }
+            else parent.character = null;
         }
-        else parent.character = null;
     }
 }
