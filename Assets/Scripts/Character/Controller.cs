@@ -21,7 +21,8 @@ public class Controller : MonoBehaviour
     public GameObject pointer;
     public Material line;
     
-    public Transform right;
+    public Transform P1pos;
+    public Transform P2pos;
     public Cinder cinder;
 
     public float movement = 0;

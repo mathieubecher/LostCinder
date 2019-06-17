@@ -37,10 +37,10 @@ public class Shoot : State
     {
         direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.character.transform.position);
         direction.Normalize();
-        character.pointer.transform.localPosition = direction*2;
+        character.pointer.transform.position = (Vector3)direction*2 + character.cinder.transform.position;
 
         Vector3[] positions = new Vector3[2];
-        positions[0] = character.transform.position;
+        positions[0] = character.cinder.transform.position;
         positions[1] = character.pointer.transform.position;
         this.lineRender.SetPositions(positions);
     }
@@ -58,7 +58,7 @@ public class Shoot : State
     {
         float lineWidth = 0.2f;
         Vector3[] positions = new Vector3[2];
-        positions[0] = character.transform.position;
+        positions[0] = character.cinder.transform.position;
         positions[1] = character.pointer.transform.position;
 
         this.line = new GameObject();
