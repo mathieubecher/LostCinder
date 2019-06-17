@@ -44,7 +44,6 @@ public class Controller : MonoBehaviour
     {
         movement = 0;
         ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
-        Debug.Log(groundCheck.transform.position + " " + ground);
         
         if (Input.GetKey(KeyCode.Q)) movement += -1;
         if (Input.GetKey(KeyCode.D)) movement += 1;
