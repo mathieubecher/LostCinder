@@ -14,13 +14,13 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        
+        UpdateSize();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        UpdateSize();
+        //UpdateSize();
         if (character != null)
         {
             if (!detect && character.activeState.GetName() != "Carry")
@@ -31,10 +31,10 @@ public class Item : MonoBehaviour
         }
         else detect = false;
     }
-    public void UpdateSize()
+    public virtual void UpdateSize()
     {
         GetComponent<Rigidbody2D>().mass = weight * 2000;
-        transform.localScale = new Vector3(1, 1, 1) * weight;
+        //transform.localScale = new Vector3(1, 1, 1) * weight;
         if (weight >= P3) gameObject.layer = 12;
         else if (weight >= P2) gameObject.layer = 11;
         else gameObject.layer = 10;

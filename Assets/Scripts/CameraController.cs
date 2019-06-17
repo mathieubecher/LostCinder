@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
 
         if(last != follow.transform.position && Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f)
         {
-            Debug.Log(Vector3.Magnitude(last - follow.transform.position));
+            
             transform.position = follow.position;
         }
         else rigidbody.velocity = (follow.position - transform.position)*strength;

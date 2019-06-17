@@ -19,7 +19,7 @@ TagManager:
   - NormalCinder
   - BigCinder
   - DetectPlayer
-  - 
+  - DetectItem
   - Frontier
   - Ground
   - Wall

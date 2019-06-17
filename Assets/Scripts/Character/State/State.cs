@@ -15,6 +15,10 @@ public class State
     {
         return movement / (1 + character.cinder.weight);
     }
+    public float MovementPush(float movement)
+    {
+        return movement / (1 + character.pushCinder.weight);
+    }
     public void carryCinder()
     {
         Vector3 direction = (character.cinder.weight>= Item.P2)?character.P2pos.transform.localPosition:character.P1pos.transform.localPosition;
@@ -45,6 +49,7 @@ public class State
     public virtual void carry() { }
     public virtual void shooting() { }
     public virtual void shoot() { }
+    public virtual void hold() { }
     public virtual void fall() { character.activeState = new Fall(character); }
 
 }

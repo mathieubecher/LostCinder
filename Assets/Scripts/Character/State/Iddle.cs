@@ -31,4 +31,5 @@ public class Iddle : State
     public override void jump() { character.activeState = new Jump(character); }
     public override void squat() { character.activeState = new Squat(character); }
     public override void carry() { character.activeState = new Carry(character); }
+    public override void shooting() { if(character.pushCinder != null)character.activeState = new Hold(character); }
 }
