@@ -14,7 +14,7 @@ public class Cinder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        weight = P1;
+        //weight = P1;
     }
 
     // Update is called once per frame

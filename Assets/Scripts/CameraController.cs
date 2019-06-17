@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
         UpdateFrontier();
         last = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
     }
-
+        
     // Update is called once per frame
     void Update()
     {
