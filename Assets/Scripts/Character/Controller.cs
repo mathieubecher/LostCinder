@@ -61,7 +61,7 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.S) && !pressDown)
         {
             pressDown = true;
-            if (!cinder.detect) activeState.squat();
+            if (cinder == null || !cinder.detect) activeState.squat();
             else activeState.carry();
         }
 

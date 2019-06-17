@@ -17,7 +17,7 @@ public class CarryFall : Fall
     }
     public override string GetName()
     {
-        return "CarryFall";
+        return "Carry";
     }
     public override void fall() { }
     public override void shooting() { character.activeState = new Shoot(character); }

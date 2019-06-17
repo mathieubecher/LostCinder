@@ -9,7 +9,7 @@ public class CarryJump : Jump
     }
     public override string GetName()
     {
-        return "CarryJump";
+        return "Carry";
     }
 
 

@@ -21,11 +21,24 @@ public class Cinder : MonoBehaviour
     void Update()
     {
         UpdateSize();
-        detect = GetComponent<Collider2D>().Distance(character.GetComponent<Collider2D>()).distance < 0;
+        if (character != null)
+        {
+            if (!detect && character.activeState.GetName() != "Carry")
+            {
+                character.cinder = null;
+                character = null;
+            }
+        }
+        else detect = false;
     }
     public void UpdateSize()
     {
         GetComponent<Rigidbody2D>().mass = weight*2;
         transform.localScale = new Vector3(1, 1, 1) * weight;
+        if (weight >= P3) gameObject.layer = 12;
+        else if (weight >= P2) gameObject.layer = 11;
+        else gameObject.layer = 10;
+
+
     }
 }
