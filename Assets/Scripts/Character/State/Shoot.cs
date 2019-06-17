@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : State
 {
     Vector2 direction;
-    private float STRENGHT = 400;
+    private float STRENGHT = 400000;
     private LineRenderer lineRender;
     private GameObject line;
 
@@ -66,7 +66,7 @@ public class Shoot : State
         this.line.AddComponent<LineRenderer>();
         this.lineRender = this.line.GetComponent<LineRenderer>();
         this.lineRender.material.color = Color.white;
-        this.lineRender.SetColors(new Color(1,1,1,0), Color.white);
+        this.lineRender.SetColors(Color.white,new Color(1,1,1,0));
         this.lineRender.SetWidth(lineWidth, lineWidth);
         this.lineRender.SetPositions(positions);
         this.lineRender.material = character.line;

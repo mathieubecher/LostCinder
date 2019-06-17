@@ -213,7 +213,7 @@ MonoBehaviour:
   stateName: {fileID: 1283892275}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 102400
+    m_Bits: 104448
   groundCheck: {fileID: 657896507}
   groundRadius: 0.1
   rigidbody: {fileID: 94443167}
@@ -1325,6 +1325,11 @@ PrefabInstance:
       propertyPath: weight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5347839368318202827, guid: 3e86a3d23fc61a04cb0754e8127d2fa7,
+        type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 587968083222287186, guid: 3e86a3d23fc61a04cb0754e8127d2fa7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e86a3d23fc61a04cb0754e8127d2fa7, type: 3}
@@ -1939,9 +1944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7feff8ec2a73541ae5667f99d78a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: 0.5
-  P2: 0.8
-  P3: 1
   character: {fileID: 94443164}
   detect: 0
   weight: 0.5
@@ -2255,6 +2257,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 173477199525285383, guid: 3e86a3d23fc61a04cb0754e8127d2fa7,
+        type: 3}
+      propertyPath: weight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347839368318202827, guid: 3e86a3d23fc61a04cb0754e8127d2fa7,
         type: 3}
       propertyPath: weight
       value: 0.8

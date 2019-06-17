@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectPlayer : MonoBehaviour
 {
-    public Cinder parent;
+    public Item parent;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class DetectPlayer : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(parent.weight < parent.P3) { 
+        if(parent.weight < Item.P3) { 
             Debug.Log(other.gameObject.name);
             parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
             if (parent.character.cinder == null) { 

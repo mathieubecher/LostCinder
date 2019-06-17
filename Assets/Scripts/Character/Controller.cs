@@ -23,7 +23,7 @@ public class Controller : MonoBehaviour
     
     public Transform P1pos;
     public Transform P2pos;
-    public Cinder cinder;
+    public Item cinder;
 
     public float movement = 0;
     public bool ground = false;
