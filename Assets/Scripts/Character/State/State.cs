@@ -10,7 +10,6 @@ public class State
     {
         this.character = character;
         character.stateName.text = GetName();
-        Debug.Log(GetName());
     }
 
     public virtual string GetName()

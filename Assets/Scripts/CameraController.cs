@@ -33,8 +33,6 @@ public class CameraController : MonoBehaviour
         Camera cam = Camera.main;
         float height = 2f * cam.orthographicSize;
         float width = height * cam.aspect;
-
-        Debug.Log(width + " " + height);
         BoxCollider2D[] frontiers = GetComponents<BoxCollider2D>();
 
         // LEFT
