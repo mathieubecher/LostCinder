@@ -194,7 +194,6 @@ GameObject:
   - component: {fileID: 94443165}
   - component: {fileID: 94443163}
   - component: {fileID: 94443164}
-  - component: {fileID: 94443169}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -244,7 +243,7 @@ MonoBehaviour:
   stateName: {fileID: 1283892275}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 65536
+    m_Bits: 98304
   groundCheck: {fileID: 657896507}
   groundRadius: 0.1
   rigidbody: {fileID: 94443167}
@@ -360,18 +359,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &94443169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94443162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180a601ff8be07d48b1f0697a7d378bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +592,7 @@ GameObject:
   - component: {fileID: 934271474}
   - component: {fileID: 934271473}
   - component: {fileID: 934271472}
+  - component: {fileID: 934271476}
   m_Layer: 15
   m_Name: CameraPoint
   m_TagString: Untagged
@@ -639,9 +627,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 50000
-  m_AngularDrag: 50000
+  m_Mass: 2
+  m_LinearDrag: 0
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -752,6 +740,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.276379, y: 3.4740562}
   m_EdgeRadius: 0
+--- !u!114 &934271476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934271469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528c7196ef22d4c42b24c73de244ad86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow: {fileID: 1693543606}
+  strength: 2
 --- !u!1 &1283892272
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +963,6 @@ GameObject:
   - component: {fileID: 1693543605}
   - component: {fileID: 1693543604}
   - component: {fileID: 1693543603}
-  - component: {fileID: 1693543607}
   - component: {fileID: 1693543608}
   m_Layer: 10
   m_Name: Cinder
@@ -1069,26 +1070,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!231 &1693543607
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693543602}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 934271471}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 0.005
-  m_DampingRatio: 0
-  m_Frequency: 6.25
 --- !u!114 &1693543608
 MonoBehaviour:
   m_ObjectHideFlags: 0
