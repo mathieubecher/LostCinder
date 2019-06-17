@@ -18,6 +18,6 @@ public class Jump : State
 
     public override void Update()
     {
-        character.rigidbody.velocity = new Vector3(character.movement * character.speed, character.rigidbody.velocity.y);
+        character.rigidbody.velocity = new Vector3(MovementJump(character.movement * character.speed), character.rigidbody.velocity.y);
     }
 }

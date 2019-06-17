@@ -8,6 +8,7 @@ public class Iddle : State
     {
         character.animator.SetBool("Squat", false);
         character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        character.rigidbody.mass = 1;
     }
 
     public override string GetName()

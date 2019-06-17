@@ -2,8 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class State
 {
+    public static float jumpSpeed = 1;
+    public float MovementJump(float movement)
+    {
+        return movement * jumpSpeed;
+    }
+    public float MovementCinder(float movement)
+    {
+        return movement / (1 + character.cinder.weight);
+    }
+
     protected Controller character;
 
     public State(Controller character)
