@@ -20,8 +20,7 @@ public class Controller : MonoBehaviour
     //Shooter
     public GameObject pointer;
     public Material line;
-
-    public Transform left;
+    
     public Transform right;
     public Cinder cinder;
 

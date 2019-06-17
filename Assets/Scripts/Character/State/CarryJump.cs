@@ -15,8 +15,7 @@ public class CarryJump : Jump
 
     public override void Update()
     {
-        if (character.GetComponent<SpriteRenderer>().flipX) character.cinder.transform.position = character.left.position;
-        else character.cinder.transform.position = character.right.position;
+        carryCinder();
         character.rigidbody.velocity = new Vector3(MovementCinder(MovementJump(character.movement * character.speed)), character.rigidbody.velocity.y);
     }
     public override void fall() { character.activeState = new CarryFall(character); }

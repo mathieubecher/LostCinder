@@ -15,6 +15,13 @@ public class State
     {
         return movement / (1 + character.cinder.weight);
     }
+    public void carryCinder()
+    {
+        Vector3 direction = character.right.transform.localPosition;
+        if (character.GetComponent<SpriteRenderer>().flipX) direction.x *= -1;
+        character.cinder.transform.position = direction+character.transform.position;
+    }
+
 
     protected Controller character;
 

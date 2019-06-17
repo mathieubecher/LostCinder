@@ -29,8 +29,7 @@ public class Shoot : State
         // maj ground detect
         if (character.gameObject.layer != 8 && character.rigidbody.velocity.y < 0) character.gameObject.layer = 8;
 
-        if (character.GetComponent<SpriteRenderer>().flipX) character.cinder.transform.position = character.left.position;
-        else character.cinder.transform.position = character.right.position;
+        carryCinder();
         UpdatePointerPos();
     }
 

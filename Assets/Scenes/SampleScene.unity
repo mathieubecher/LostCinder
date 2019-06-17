@@ -120,36 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &20564477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 20564478}
-  m_Layer: 8
-  m_Name: Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &20564478
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20564477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.248, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 94443168}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50703796
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 94443168}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94443162
 GameObject:
@@ -250,7 +220,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   pointer: {fileID: 593525622}
   line: {fileID: 2100000, guid: 81d051090ee47bd44a7a6a6795564830, type: 2}
-  left: {fileID: 20564478}
   right: {fileID: 50703797}
   cinder: {fileID: 1693543608}
   movement: 0
@@ -357,7 +326,6 @@ Transform:
   m_Children:
   - {fileID: 657896508}
   - {fileID: 1283892273}
-  - {fileID: 20564478}
   - {fileID: 50703797}
   - {fileID: 593525623}
   m_Father: {fileID: 0}
@@ -592,7 +560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 94443168}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657896507
 GameObject:
@@ -1765,6 +1733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7feff8ec2a73541ae5667f99d78a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P1: 0.5
+  P2: 0.8
+  P3: 1
   character: {fileID: 94443164}
   detect: 0
   weight: 0.5
