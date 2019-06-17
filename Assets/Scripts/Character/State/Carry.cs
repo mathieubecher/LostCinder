@@ -21,4 +21,5 @@ public class Carry : State
     public override void jump() { character.activeState = new CarryJump(character); }
     public override void carry() { character.activeState = new Iddle(character); }
     public override void fall() { character.activeState = new CarryFall(character); }
+    public override void shooting() { character.activeState = new Shoot(character); }
 }

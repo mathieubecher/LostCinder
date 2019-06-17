@@ -24,6 +24,8 @@ public class State
     public virtual void squat() { }
     public virtual void raise() { }
     public virtual void carry() { }
+    public virtual void shooting() { }
+    public virtual void shoot() { }
     public virtual void fall() { character.activeState = new Fall(character); }
 
 }

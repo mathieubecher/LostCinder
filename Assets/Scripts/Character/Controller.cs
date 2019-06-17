@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
 
     public Rigidbody2D rigidbody;
     public Animator animator;
+    public GameObject pointer;
 
     public Transform left;
     public Transform right;
@@ -24,6 +25,7 @@ public class Controller : MonoBehaviour
     public float movement = 0;
     public bool ground = false;
     private bool pressDown = false;
+    public bool click = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +37,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         DetectInput();
         activeState.Update();
-
     }
     private void DetectInput()
     {
@@ -68,6 +68,15 @@ public class Controller : MonoBehaviour
             activeState.raise();
         }
 
+        if (Input.GetMouseButton(0) && !click)
+        {
+            activeState.shooting();
+        }
+        else if(!Input.GetMouseButton(0) && click)
+        {
+            activeState.shoot();
+            click = false;
+        }
 
 
     }

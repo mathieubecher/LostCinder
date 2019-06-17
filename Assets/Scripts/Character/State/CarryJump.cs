@@ -20,4 +20,5 @@ public class CarryJump : Jump
         base.Update();
     }
     public override void fall() { character.activeState = new CarryFall(character); }
+    public override void shooting() { character.activeState = new Shoot(character); }
 }

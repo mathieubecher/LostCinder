@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public Vector3 last;
     public Transform follow;
     public float strength = 2;
 
@@ -15,6 +16,7 @@ public class CameraController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         resolution = new Vector2(Screen.width, Screen.height);
         UpdateFrontier();
+        last = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
     }
 
     // Update is called once per frame
@@ -26,7 +28,13 @@ public class CameraController : MonoBehaviour
             resolution.x = Screen.width;
             resolution.y = Screen.height;
         }
-        rigidbody.velocity = (follow.position - transform.position)*strength;
+
+        if(last != follow.transform.position)
+        {
+            rigidbody.velocity = (follow.position - transform.position) * strength*5;
+        }
+        else rigidbody.velocity = (follow.position - transform.position)*strength;
+        last = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
     }
     void UpdateFrontier()
     {

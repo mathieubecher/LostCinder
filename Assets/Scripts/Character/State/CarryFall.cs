@@ -21,4 +21,5 @@ public class CarryFall : Fall
         return "CarryFall";
     }
     public override void fall() { }
+    public override void shooting() { character.activeState = new Shoot(character); }
 }
