@@ -8,18 +8,24 @@ public class CameraController : MonoBehaviour
     public float strength = 2;
 
     private Rigidbody2D rigidbody;
-
+    private Vector2 resolution;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-
+        resolution = new Vector2(Screen.width, Screen.height);
         UpdateFrontier();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (resolution.x != Screen.width || resolution.y != Screen.height)
+        {
+            UpdateFrontier();
+            resolution.x = Screen.width;
+            resolution.y = Screen.height;
+        }
         rigidbody.velocity = (follow.position - transform.position)*strength;
     }
     void UpdateFrontier()
