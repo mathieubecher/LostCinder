@@ -249,6 +249,7 @@ MonoBehaviour:
   rigidbody: {fileID: 94443167}
   animator: {fileID: 0}
   pointer: {fileID: 593525622}
+  line: {fileID: 2100000, guid: 81d051090ee47bd44a7a6a6795564830, type: 2}
   left: {fileID: 20564478}
   right: {fileID: 50703797}
   cinder: {fileID: 1693543608}

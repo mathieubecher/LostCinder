@@ -16,7 +16,10 @@ public class Controller : MonoBehaviour
 
     public Rigidbody2D rigidbody;
     public Animator animator;
+
+    //Shooter
     public GameObject pointer;
+    public Material line;
 
     public Transform left;
     public Transform right;
