@@ -19,7 +19,7 @@ public class Carry : State
     {
         return "Carry";
     }
-    public override void jump() { character.activeState = new CarryJump(character); }
+    public override void jump() { if(character.cinder.weight<1)character.activeState = new CarryJump(character); }
     public override void carry() { character.activeState = new Iddle(character); }
     public override void fall() { character.activeState = new CarryFall(character); }
     public override void shooting() { character.activeState = new Shoot(character); }
