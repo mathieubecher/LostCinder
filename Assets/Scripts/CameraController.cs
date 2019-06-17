@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Vector3 last;
     public Transform follow;
-    public float strength = 2;
+    public float strength = 4;
 
     private Rigidbody2D rigidbody;
     private Vector2 resolution;
@@ -29,9 +29,10 @@ public class CameraController : MonoBehaviour
             resolution.y = Screen.height;
         }
 
-        if(last != follow.transform.position)
+        if(last != follow.transform.position && Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f)
         {
-            rigidbody.velocity = (follow.position - transform.position) * strength*5;
+            Debug.Log(Vector3.Magnitude(last - follow.transform.position));
+            transform.position = follow.position;
         }
         else rigidbody.velocity = (follow.position - transform.position)*strength;
         last = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
