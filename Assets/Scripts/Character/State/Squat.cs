@@ -7,6 +7,8 @@ public class Squat : State
     public Squat(Controller character) : base(character)
     {
         character.animator.SetBool("Squat",true);
+        character.GetComponent<BoxCollider2D>().offset = new Vector2(0,-0.26f);
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.7f, 0.5f);
     }
     public override void Update()
     {
