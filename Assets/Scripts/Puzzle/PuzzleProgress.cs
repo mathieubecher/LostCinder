@@ -40,6 +40,10 @@ public class PuzzleProgress : MonoBehaviour
             progress = actualProgress;
             parent.cinder.weight = beginWeight + (endWeight - beginWeight) * progress;
         }
+        else if(actualProgress > 1)
+        {
+            progress = 1;
+        }
     }
 
 }

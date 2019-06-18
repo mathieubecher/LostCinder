@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
             resolution.y = Screen.height;
         }
 
-        if(last != follow.transform.position && Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f)
+        if(last != follow.transform.position && (Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f || Vector3.Magnitude(follow.transform.position - transform.position) > 10f))
         {
             
             transform.position = follow.position;

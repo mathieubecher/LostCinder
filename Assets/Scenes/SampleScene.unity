@@ -453,6 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzles:
   - {fileID: 3060367134865058754, guid: b1e6917e76be0b442885356696e75a94, type: 3}
+  - {fileID: 2311650620553397832, guid: 0e4e15482d227994796180531e3f2830, type: 3}
   instances: []
   actualPuzzle: {fileID: 0}
   character: {fileID: 94443164}

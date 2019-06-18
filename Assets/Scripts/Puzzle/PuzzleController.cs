@@ -34,6 +34,7 @@ public class PuzzleController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             int id = actualPuzzle.id;
+            instances.Remove(actualPuzzle);
             Destroy(actualPuzzle.gameObject);
             actualPuzzle = null;
             int i = 0;
@@ -41,6 +42,13 @@ public class PuzzleController : MonoBehaviour
             actualPuzzle = InstantiatePuzzle(puzzles[i]);
             actualPuzzle.Retry();
         }
+        if (actualPuzzle.progress.progress >= 1)
+        {
+            Debug.Log("change");
+            instances.Remove(actualPuzzle);
+            actualPuzzle = GetFirst();
+        }
+
     }
 
     Puzzle InstantiatePuzzle(Puzzle p)
@@ -50,5 +58,17 @@ public class PuzzleController : MonoBehaviour
         instance.cinder = cinder;
         instances.Add(instance);
         return instance;
+    }
+    Puzzle GetFirst()
+    {
+        Puzzle firstpuzzle = instances[0];
+        for (int i = 0; i < instances.Count; i++)
+        {
+            if (instances[i].id < firstpuzzle.id)
+            {
+                firstpuzzle = instances[i];
+            }
+        }
+        return firstpuzzle;
     }
 }
