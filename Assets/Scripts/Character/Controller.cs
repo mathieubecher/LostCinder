@@ -44,7 +44,7 @@ public class Controller : MonoBehaviour
     void Update()
     {
         DetectInput();
-
+        
         if(pushCinder!=null)
         {
             distancePush = GetComponent<Collider2D>().Distance(pushCinder.GetComponent<Collider2D>()).distance;
@@ -52,6 +52,12 @@ public class Controller : MonoBehaviour
             pushCinder = null;
         }
         activeState.Update();
+
+        if (cinder != null && cinder.character == null)
+        {
+            Debug.Log(cinder + " " + cinder.character);
+            cinder = null;
+        }
     }
     private void DetectInput()
     {

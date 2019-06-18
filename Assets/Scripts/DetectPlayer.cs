@@ -21,11 +21,15 @@ public class DetectPlayer : MonoBehaviour
     {
         if(parent.weight < Item.P3) { 
             parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
-            if (parent.character.cinder == null) { 
+            if (parent.character.cinder == null)
+            {
                 parent.character.cinder = parent;
                 parent.detect = true;
             }
-            else parent.character = null;
+            else
+            {
+                parent.character = null;
+            }
         }
     }
 }
