@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : State
 {
     Vector2 direction;
-    private float STRENGHT = 400000;
+    private float STRENGHT = 600000;
     private LineRenderer lineRender;
     private GameObject line;
 

@@ -25,6 +25,7 @@ public class Controller : MonoBehaviour
     public Transform P2pos;
     public Item cinder;
     public Item pushCinder;
+    public float distancePush=0;
     public float distanceLeave=0.2f;
 
     public float movement = 0;
@@ -43,8 +44,11 @@ public class Controller : MonoBehaviour
     void Update()
     {
         DetectInput();
-        if(pushCinder!=null && GetComponent<Collider2D>().Distance(pushCinder.GetComponent<Collider2D>()).distance > distanceLeave)
+
+        if(pushCinder!=null)
         {
+            distancePush = GetComponent<Collider2D>().Distance(pushCinder.GetComponent<Collider2D>()).distance;
+            if(distancePush > distanceLeave)
             pushCinder = null;
         }
         activeState.Update();
