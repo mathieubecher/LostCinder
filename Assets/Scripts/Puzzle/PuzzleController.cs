@@ -42,7 +42,7 @@ public class PuzzleController : MonoBehaviour
             actualPuzzle = InstantiatePuzzle(puzzles[i]);
             actualPuzzle.Retry();
         }
-        if (actualPuzzle.progress.progress >= 1)
+        if (actualPuzzle.progress.progress >= 1 && instances.Count > 1)
         {
             Debug.Log("change");
             instances.Remove(actualPuzzle);
