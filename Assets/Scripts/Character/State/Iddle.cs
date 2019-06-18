@@ -7,7 +7,11 @@ public class Iddle : State
     public Iddle(Controller character) : base(character)
     {
         character.animator.SetBool("Squat", false);
-        if(character.cinder!=null) character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        if (character.cinder != null)
+        {
+            character.cinder.GetComponent<Collider2D>().isTrigger = false;
+            character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
         character.rigidbody.mass = 1;
         character.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.5f, 1f);

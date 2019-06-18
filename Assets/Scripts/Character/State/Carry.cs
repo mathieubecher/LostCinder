@@ -6,6 +6,7 @@ public class Carry : State
 {
     public Carry(Controller character) : base(character)
     {
+        character.cinder.GetComponent<Collider2D>().isTrigger = true;
         character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         character.rigidbody.mass = 1 + character.cinder.weight;
     }
