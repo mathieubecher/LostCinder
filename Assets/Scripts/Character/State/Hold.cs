@@ -14,6 +14,7 @@ public class Hold : State
     {
         if(character.pushCinder != null) {
             character.rigidbody.velocity = new Vector3(MovementPush(character.movement * character.speed), character.rigidbody.velocity.y);
+            character.pushCinder.GetComponent<Rigidbody2D>().velocity = new Vector3(MovementPush(character.movement * character.speed), character.pushCinder.GetComponent<Rigidbody2D>().velocity.y);
             last = character.transform.position;
         }
         else
@@ -29,5 +30,5 @@ public class Hold : State
     public override void jump() { character.activeState = new Jump(character); }
     public override void squat() { character.activeState = new Squat(character); }
     public override void carry() { character.activeState = new Carry(character); }
-    public override void shoot() { character.click = false; character.activeState = new Iddle(character); }
+    public override void shoot() { character.click = false; character.pushCinder = null; character.activeState = new Iddle(character); }
 }
