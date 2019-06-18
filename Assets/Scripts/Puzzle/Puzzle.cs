@@ -9,25 +9,24 @@ public class Puzzle : MonoBehaviour
     public Controller character;
     public Cinder cinder;
     public PuzzleProgress progress;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Retry()
     {
-
-    }
-
-    public void Respawn()
-    {
-
+        character.transform.position = progress.begin.position;
+        character.rigidbody.velocity = new Vector3(0, 0);
+        cinder.transform.position = progress.begin.position + new Vector3(1, 0, 0);
+        cinder.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+        progress.progress = 0;
     }
 }
