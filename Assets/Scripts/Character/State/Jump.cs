@@ -9,7 +9,7 @@ public class Jump : State
         
         character.gameObject.layer = 9;
         character.rigidbody.velocity = new Vector3(0, 0);
-        character.rigidbody.AddForce(character.transform.up * 300);
+        character.rigidbody.AddForce(character.transform.up * 450);
     }
     public override string GetIdentifiant()
     {
