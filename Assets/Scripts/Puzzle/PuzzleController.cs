@@ -44,7 +44,6 @@ public class PuzzleController : MonoBehaviour
         }
         if (actualPuzzle.progress.progress >= 1 && instances.Count > 1)
         {
-            Debug.Log("change");
             instances.Remove(actualPuzzle);
             actualPuzzle = GetFirst();
         }

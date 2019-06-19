@@ -35,9 +35,10 @@ public class PuzzleProgress : MonoBehaviour
         Vector3 playerpos = parent.character.transform.position;
         float actualProgress = (progressDirection == Direction.horizontal)?Math.Abs((parent.character.transform.position.x - begin.position.x) / (end.position.x - begin.position.x)):
             Math.Abs((parent.character.transform.position.y - begin.position.y) / (end.position.y - begin.position.y));
-        if (actualProgress > progress && actualProgress <= 1 && actualProgress >= 0)
+
+        if (((actualProgress <= 0 && progress == 0) || actualProgress > progress) && actualProgress <= 1)
         {
-            progress = actualProgress;
+            progress = (actualProgress > 0)? actualProgress : 0;
             parent.cinder.weight = beginWeight + (endWeight - beginWeight) * progress;
         }
         else if(actualProgress > 1)

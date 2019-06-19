@@ -28,8 +28,8 @@ public class Puzzle : MonoBehaviour
         cinder.transform.position = progress.begin.position + new Vector3(1, 0, 0);
         character.rigidbody.velocity = new Vector3(0, 0);
         character.transform.position = progress.begin.position;
-        
-        
         progress.progress = 0;
+        Debug.Log("fin retry");
+        progress.UpdateCinder();
     }
 }
