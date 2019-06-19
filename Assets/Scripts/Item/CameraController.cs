@@ -45,16 +45,16 @@ public class CameraController : MonoBehaviour
         BoxCollider2D[] frontiers = GetComponents<BoxCollider2D>();
 
         // LEFT
-        frontiers[0].offset = new Vector2(-width/2 - 1,0);
+        frontiers[0].offset = new Vector2(-width/2 - 1,0) + (Vector2)cam.transform.localPosition;
         frontiers[0].size = new Vector2(2, height + 2);
         // RIGHT
-        frontiers[1].offset = new Vector2(width / 2 + 1, 0);
+        frontiers[1].offset = new Vector2(width / 2 + 1, 0) + (Vector2)cam.transform.localPosition;
         frontiers[1].size = new Vector2(2, height + 2);
         // TOP
-        frontiers[2].offset = new Vector2(0, -height / 2 - 1);
+        frontiers[2].offset = new Vector2(0, -height / 2 - 1) + (Vector2)cam.transform.localPosition;
         frontiers[2].size = new Vector2(width + 2, 2);
         // BOTTOM
-        frontiers[3].offset = new Vector2(0, height / 2 + 1);
+        frontiers[3].offset = new Vector2(0, height / 2 + 1) + (Vector2)cam.transform.localPosition;
         frontiers[3].size = new Vector2(width + 2, 2);
 
     }
