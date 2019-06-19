@@ -6,7 +6,7 @@ public class CarryFall : Fall
 {
     public CarryFall(Controller character) : base(character)
     {
-        character.stateName.text = GetName() + " Fall";
+        character.stateName.text = GetIdentifiant() + " Fall";
     }
 
     public override void Update()
@@ -15,7 +15,7 @@ public class CarryFall : Fall
         if (character.ground) character.activeState = new Carry(character);
         character.rigidbody.velocity = new Vector3(MovementCinder(MovementJump(character.movement * character.speed)), character.rigidbody.velocity.y);
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Carry";
     }

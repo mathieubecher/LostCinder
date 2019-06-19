@@ -15,7 +15,7 @@ public class Squat : State
         character.rigidbody.velocity = new Vector3(0, character.rigidbody.velocity.y);
     }
 
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Squat";
     }

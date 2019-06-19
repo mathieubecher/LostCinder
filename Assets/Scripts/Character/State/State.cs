@@ -32,10 +32,10 @@ public class State
     public State(Controller character)
     {
         this.character = character;
-        character.stateName.text = GetName();
+        character.stateName.text = GetIdentifiant();
     }
 
-    public virtual string GetName()
+    public virtual string GetIdentifiant()
     {
         return "State";
     }

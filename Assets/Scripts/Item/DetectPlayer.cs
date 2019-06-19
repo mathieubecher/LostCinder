@@ -15,11 +15,12 @@ public class DetectPlayer : MonoBehaviour
     void Update()
     {
         if(parent.character != null)
-            parent.detect = parent.character.activeState.GetName()=="Carry" || GetComponent<Collider2D>().Distance(parent.character.GetComponent<Collider2D>()).distance < 0;
+            parent.detect = parent.character.activeState.GetIdentifiant() == "Carry" || GetComponent<Collider2D>().Distance(parent.character.GetComponent<Collider2D>()).distance < 0;
+            
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(parent.weight < Item.P3) { 
+        if(parent.weight < Item.P3 && parent.character == null) { 
             parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
             if (parent.character.cinder == null)
             {
@@ -29,6 +30,7 @@ public class DetectPlayer : MonoBehaviour
             else
             {
                 parent.character = null;
+                Debug.Log("ça sort");
             }
         }
     }

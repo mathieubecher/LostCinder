@@ -23,8 +23,10 @@ public class Item : MonoBehaviour
         //UpdateSize();
         if (character != null)
         {
-            if (!detect && character.activeState.GetName() != "Carry")
+            if (!detect && character.activeState.GetIdentifiant() != "Carry")
             {
+                //Debug.Log(character.activeState.GetIdentifiant() + " " + character.activeState.GetType());
+
                 character.cinder = null;
                 character = null;
             }

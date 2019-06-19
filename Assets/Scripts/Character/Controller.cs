@@ -55,8 +55,11 @@ public class Controller : MonoBehaviour
 
         if (cinder != null && cinder.character == null)
         {
-            Debug.Log(cinder + " " + cinder.character);
+            //Debug.Log(cinder + " " + cinder.character);
+            cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            cinder.GetComponent<Collider2D>().isTrigger = false;
             cinder = null;
+            if (activeState.GetIdentifiant() == ("Carry")) activeState = new Iddle(this);
         }
     }
     private void DetectInput()

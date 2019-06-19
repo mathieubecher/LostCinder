@@ -9,14 +9,14 @@ public class Carry : State
         character.cinder.GetComponent<Collider2D>().isTrigger = true;
         character.cinder.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         character.rigidbody.mass = 1 + character.cinder.weight;
-        character.stateName.text = GetName() + " Iddle";
+        character.stateName.text = GetIdentifiant() + " Iddle";
     }
     public override void Update()
     {
         carryCinder();
         character.rigidbody.velocity = new Vector3(MovementCinder(character.movement * character.speed), character.rigidbody.velocity.y);
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Carry";
     }

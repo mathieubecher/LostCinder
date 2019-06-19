@@ -29,7 +29,7 @@ public class Hold : State
             character.activeState = new Iddle(character);
         }
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Hold";
     }

@@ -6,9 +6,9 @@ public class CarryJump : Jump
 {
     public CarryJump(Controller character) : base(character)
     {
-        character.stateName.text = GetName() + " Jump";
+        character.stateName.text = GetIdentifiant() + " Jump";
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Carry";
     }
@@ -17,6 +17,7 @@ public class CarryJump : Jump
     public override void Update()
     {
         carryCinder();
+        if (character.ground) character.activeState = new Carry(character);
         character.rigidbody.velocity = new Vector3(MovementCinder(MovementJump(character.movement * character.speed)), character.rigidbody.velocity.y);
     }
     public override void fall() { character.activeState = new CarryFall(character); }

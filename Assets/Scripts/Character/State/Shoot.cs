@@ -18,7 +18,7 @@ public class Shoot : State
         UpdatePointerPos();
         
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Shoot";
     }

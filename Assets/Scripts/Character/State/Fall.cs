@@ -14,7 +14,7 @@ public class Fall : State
         if (character.ground) character.activeState = new Iddle(character);
         character.rigidbody.velocity = new Vector3(MovementJump(character.movement * character.speed), character.rigidbody.velocity.y);
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Fall";
     }

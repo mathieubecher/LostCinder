@@ -11,7 +11,7 @@ public class Jump : State
         character.rigidbody.velocity = new Vector3(0, 0);
         character.rigidbody.AddForce(character.transform.up * 600);
     }
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         return "Jump";
     }

@@ -12,6 +12,7 @@ public class Button : Actionner
     {
         if (revertable && begin && touch != null && GetComponent<Collider2D>().Distance(touch).distance > 0)
         {
+            //Debug.Log("active");
             Action();
             touch = null;
         }
@@ -23,6 +24,7 @@ public class Button : Actionner
         {
             if (!begin)
             {
+                //Debug.Log(other.gameObject.name);
                 touch = other;
                 Action();
             }

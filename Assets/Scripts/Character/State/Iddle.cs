@@ -17,7 +17,7 @@ public class Iddle : State
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.5f, 1f);
     }
 
-    public override string GetName()
+    public override string GetIdentifiant()
     {
         if (character.movement != 0)
         {
@@ -28,7 +28,7 @@ public class Iddle : State
 
     public override void Update()
     {
-        character.stateName.text = GetName();
+        character.stateName.text = GetIdentifiant();
         character.rigidbody.velocity = new Vector3(character.movement * character.speed, character.rigidbody.velocity.y);
     }
     
