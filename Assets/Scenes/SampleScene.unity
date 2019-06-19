@@ -613,6 +613,9 @@ MonoBehaviour:
   - {fileID: 5182971519705142, guid: 852449f541a58c64eb15e08e5eb68e43, type: 3}
   - {fileID: 3457852838105076553, guid: c83365b1b734b3b48800c09aa9950fae, type: 3}
   - {fileID: 4335634809362794816, guid: 7b9d440b4076812459c656c1aa2e49de, type: 3}
+  - {fileID: 7630301584542462037, guid: 5124cfd9780fd7545be54819052b1f75, type: 3}
+  - {fileID: 6821131398755359549, guid: a2618d1800b61c848bfca3c5e5f54ce2, type: 3}
+  - {fileID: 3570004505210995639, guid: 67dc9d8e43878c3478678c7b6c010a63, type: 3}
   instances: []
   actualPuzzle: {fileID: 0}
   character: {fileID: 94443164}
@@ -1580,12 +1583,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025266270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.46, y: -5.3, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -47.114, y: 4.231, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1971002860}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283892272
 GameObject:
@@ -1781,11 +1784,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361732295}
   m_LocalRotation: {x: -0, y: -0, z: 0.16005304, w: 0.98710847}
-  m_LocalPosition: {x: 69.199486, y: -2.5893142, z: 0}
+  m_LocalPosition: {x: -47.37451, y: 6.9416857, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1971002860}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.42}
 --- !u!1 &1395107347
 GameObject:
@@ -1859,12 +1862,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395107347}
-  m_LocalRotation: {x: -0, y: -0, z: 0.057660166, w: 0.99833626}
-  m_LocalPosition: {x: 71.21, y: -4.87, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.05766017, w: 0.9983363}
+  m_LocalPosition: {x: -45.364, y: 4.6610003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1971002860}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.6110005}
 --- !u!1 &1693543602
 GameObject:
@@ -6764,7 +6767,7 @@ GameObject:
   - component: {fileID: 1971002860}
   - component: {fileID: 1971002859}
   m_Layer: 0
-  m_Name: cerne_sol_ld_moyen_01
+  m_Name: Sol LD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6830,6 +6833,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 80857523}
+  - {fileID: 1025266272}
+  - {fileID: 1361732297}
+  - {fileID: 1395107349}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
