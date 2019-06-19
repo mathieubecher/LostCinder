@@ -109,7 +109,7 @@ MonoBehaviour:
   begin: {fileID: 3457852837402347643}
   end: {fileID: 3457852837345073937}
   beginWeight: 0.5
-  endWeight: 0.55
+  endWeight: 0.5
   progress: 0
   progressDirection: 0
 --- !u!1 &3457852838105076552

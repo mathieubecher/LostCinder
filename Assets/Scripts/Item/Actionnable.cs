@@ -14,11 +14,10 @@ public class Actionnable : MonoBehaviour
     public bool revertable = false;
     public bool chain = false;
     public bool linear = false;
+    private bool isbegin = false;
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        beginPos += transform.position;
-        endPos += transform.position;
         beginAngle += transform.eulerAngles.z;
         endAngle += transform.eulerAngles.z;
     }
@@ -64,6 +63,12 @@ public class Actionnable : MonoBehaviour
 
     public virtual void Action()
     {
+        if (!isbegin)
+        {
+            isbegin = true;
+            beginPos += transform.position;
+            endPos += transform.position;
+        }
         begin = !begin;
     }
 }

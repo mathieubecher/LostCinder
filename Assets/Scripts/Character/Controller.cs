@@ -32,6 +32,7 @@ public class Controller : MonoBehaviour
     public bool ground = false;
     private bool pressDown = false;
     public bool click = false;
+    private bool space = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +75,12 @@ public class Controller : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = movement < 0;
         }
-        if (Input.GetKey(KeyCode.Space)) activeState.jump();
+        if (Input.GetKey(KeyCode.Space) && !space)
+        {
+            space = true;
+            activeState.jump();
+        }
+        else if(!Input.GetKey(KeyCode.Space)) space = false;
         if (!ground && rigidbody.velocity.y < 0) activeState.fall();
 
         if (Input.GetKey(KeyCode.S) && !pressDown)
