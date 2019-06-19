@@ -62,8 +62,9 @@ public class Controller : MonoBehaviour
     private void DetectInput()
     {
         movement = 0;
-        ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
         
+        ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
+       
         if (Input.GetKey(KeyCode.Q)) movement += -1;
         if (Input.GetKey(KeyCode.D)) movement += 1;
         if (movement != 0)
@@ -72,7 +73,6 @@ public class Controller : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space)) activeState.jump();
         if (!ground && rigidbody.velocity.y < 0) activeState.fall();
-
 
         if (Input.GetKey(KeyCode.S) && !pressDown)
         {

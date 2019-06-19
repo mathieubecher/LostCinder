@@ -6,7 +6,7 @@ public class CarryFall : Fall
 {
     public CarryFall(Controller character) : base(character)
     {
-
+        character.stateName.text = GetName() + " Fall";
     }
 
     public override void Update()

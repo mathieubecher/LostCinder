@@ -6,6 +6,7 @@ public class CarryJump : Jump
 {
     public CarryJump(Controller character) : base(character)
     {
+        character.stateName.text = GetName() + " Jump";
     }
     public override string GetName()
     {

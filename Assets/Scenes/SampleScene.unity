@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 94443163}
   m_Layer: 8
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
   stateName: {fileID: 1283892275}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 104448
+    m_Bits: 235520
   groundCheck: {fileID: 657896507}
   groundRadius: 0.1
   rigidbody: {fileID: 94443167}
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1693543608}
   m_Layer: 10
   m_Name: Cinder
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
