@@ -24,7 +24,7 @@ public class Button : Actionner
         {
             if (!begin)
             {
-                //Debug.Log(other.gameObject.name);
+                Debug.Log(other.gameObject.name);
                 touch = other;
                 Action();
             }

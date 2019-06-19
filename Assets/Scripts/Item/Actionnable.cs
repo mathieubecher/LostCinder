@@ -26,21 +26,25 @@ public class Actionnable : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (timer <= time || chain)
-        {
-            if (begin) { 
-                timer += Time.deltaTime;
-                if (timer > time && !chain) timer = time;
-                else timer = timer % time;
-            }
-            else if (revertable)
+        if (time > 0) { 
+            if (timer <= time || chain)
             {
-                timer -= Time.deltaTime;
-                if (timer < 0) timer = 0;
+                if (begin) { 
+                    timer += Time.deltaTime;
+                    if (timer > time && !chain) timer = time;
+                    else timer = timer % time;
+                }
+                else if (revertable)
+                {
+                    timer -= Time.deltaTime;
+                    if (timer < 0) timer = 0;
+                }
+                if(begin || revertable) { 
+                    float progress = AnimProgress();
+                    transform.position = Vector3.Lerp(beginPos, endPos, progress);
+                    transform.eulerAngles = new Vector3(0, 0, beginAngle + (endAngle - beginAngle) * progress);
+                }
             }
-            float progress = AnimProgress();
-            transform.position = Vector3.Lerp(beginPos, endPos, progress);
-            transform.eulerAngles = new Vector3(0, 0, beginAngle + (endAngle - beginAngle) * progress);
         }
     }
 

@@ -6,10 +6,10 @@ public class BreakableJoint : Actionner
 {
     public override void Action()
     {
-
+        Debug.Log("Action");
         if (!begin)
         {
-            Destroy(GetComponent<DistanceJoint2D>());
+            Destroy(GetComponent<HingeJoint2D>());
             begin = true;
             if (action != null) action.Action();
         }
