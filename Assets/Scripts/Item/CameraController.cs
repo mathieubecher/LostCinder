@@ -29,12 +29,17 @@ public class CameraController : MonoBehaviour
             resolution.y = Screen.height;
         }
 
-        if(last != follow.transform.position && (Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f || Vector3.Magnitude(follow.transform.position - transform.position) > 10f))
+        if (last != follow.transform.position && (Vector3.Magnitude(follow.transform.position - transform.position) < 0.1f || Vector3.Magnitude(follow.transform.position - transform.position) > 10f))
         {
-            
-            transform.position = follow.position;
+
+            transform.position = new Vector3(follow.position.x, follow.position.y);
         }
-        else rigidbody.velocity = (follow.position - transform.position)*strength;
+        else
+        {
+            Vector3 velocite = (follow.position - transform.position) * strength;
+            rigidbody.velocity = new Vector3(velocite.x, velocite.y);
+        }
+
         last = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
     }
     void UpdateFrontier()
