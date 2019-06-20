@@ -11,7 +11,7 @@ public class ActionnableSuite : Actionnable
         base.Update();
         if(timer >= time)
         {
-            if(action!=null)action.Action();
+            if(action!=null && !action.begin)action.Action();
         }
     }
 }

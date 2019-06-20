@@ -15,8 +15,8 @@ public class Iddle : State
 
 
         character.rigidbody.mass = 1;
-        character.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
-        character.GetComponent<BoxCollider2D>().size = new Vector2(0.5f, 1f);
+        character.GetComponent<BoxCollider2D>().offset = new Vector2(0, -0.25f);
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.5f, 0.5f);
     }
 
     public override string GetIdentifiant()
