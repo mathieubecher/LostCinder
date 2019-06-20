@@ -9,6 +9,7 @@ public class Hold : State
     {
         character.click = true;
         ecart = character.transform.position.x-character.pushCinder.transform.position.x;
+        character.GetComponent<SpriteRenderer>().flipX = ecart > 0;
     }
     public override void Update()
     {

@@ -15,6 +15,7 @@ public class Carry : State
     {
         carryCinder();
         character.rigidbody.velocity = new Vector3(MovementCinder(character.movement * character.speed), character.rigidbody.velocity.y);
+
     }
     public override string GetIdentifiant()
     {
