@@ -5,8 +5,14 @@ using UnityEngine;
 public class DestroyableItem : Actionnable
 
 {
+    public List<Rigidbody2D> freezes;
+
     public override void Action()
     {
-        Destroy(this.gameObject);
+        foreach(Rigidbody2D r in freezes)
+        {
+            r.constraints = RigidbodyConstraints2D.None;
+        }
+        GetComponent<Collider2D>().isTrigger = true;
     }
 }

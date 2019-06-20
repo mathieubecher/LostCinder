@@ -970,6 +970,7 @@ GameObject:
   - component: {fileID: 8669987164584880948}
   - component: {fileID: 8895930984876720413}
   - component: {fileID: 8170857452664755233}
+  - component: {fileID: 9033442707594595025}
   m_Layer: 17
   m_Name: BalanceDroite
   m_TagString: Untagged
@@ -1050,7 +1051,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.12458268, y: -1.762207}
   m_SpriteTilingProperty:
@@ -1065,6 +1066,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96169025, y: 0.21558619}
   m_EdgeRadius: 0
+--- !u!251 &9033442707594595025
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224883708310333285}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &7344577298109182828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7421123691497110906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.660004, y: 1.4982271, z: 3}
+  m_LocalPosition: {x: 16.660004, y: 1.4982271, z: 10}
   m_LocalScale: {x: 0.824, y: 0.824, z: 0.824}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
