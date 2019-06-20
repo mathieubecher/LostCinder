@@ -10,10 +10,17 @@ public class Item : MonoBehaviour
     public Controller character;
     public bool detect;
     public float weight = 0.5f;
+    public bool floor = false;
+    public LayerMask whatIsGround;
+    public AudioClip atterissage;
+    public static AudioClip Atterissage;
+    public AudioSource source;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        if (atterissage != null) Atterissage = atterissage;
+        source = GetComponent<AudioSource>();
         UpdateSize();
     }
 
@@ -32,6 +39,16 @@ public class Item : MonoBehaviour
             }
         }
         else detect = false;
+        bool testfloor = Physics2D.OverlapCircle(transform.position, 1, whatIsGround);
+        if (floor != testfloor )
+        {
+            floor = testfloor;
+            if (floor)
+            {
+                source.PlayOneShot(atterissage, weight);
+            }
+        }
+        
     }
     public virtual void UpdateSize()
     {

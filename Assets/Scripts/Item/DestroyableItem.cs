@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyableItem : Actionnable
 
 {
+    public AudioClip destroy;
     public List<Rigidbody2D> freezes;
 
     public override void Action()
@@ -14,5 +15,6 @@ public class DestroyableItem : Actionnable
             r.constraints = RigidbodyConstraints2D.None;
         }
         GetComponent<Collider2D>().isTrigger = true;
+        GetComponent<AudioSource>().PlayOneShot(destroy,2);
     }
 }

@@ -9,7 +9,7 @@ public class Controller : MonoBehaviour
     public float speed = 0.2f;
     public TextMesh stateName;
 
-
+    public AudioSource source;
     public LayerMask whatIsGround;
     public GameObject groundCheck;
     public float groundRadius = 0.2f;
@@ -20,14 +20,21 @@ public class Controller : MonoBehaviour
     //Shooter
     public GameObject pointer;
     public Material line;
-    
+
     public Transform P1pos;
     public Transform P2pos;
     public Transform ShootPos;
     public Item cinder;
     public Item pushCinder;
-    public float distancePush=0;
-    public float distanceLeave=0.2f;
+    public float distancePush = 0;
+    public float distanceLeave = 0.2f;
+
+    public AudioClip saut;
+    public AudioClip atterissage;
+    public List<AudioClip> deplacement;
+    public AudioClip viser;
+    public AudioClip tirer;
+
 
     public float movement = 0;
     public bool ground = false;
@@ -40,6 +47,7 @@ public class Controller : MonoBehaviour
         rigidbody = GetComponent< Rigidbody2D>();
         animator = GetComponent<Animator>();
         activeState = new Iddle(this);
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -75,7 +83,7 @@ public class Controller : MonoBehaviour
         
         ground = Physics2D.OverlapCircle(groundCheck.transform.position, groundRadius, whatIsGround);
        
-        if (Input.GetKey(KeyCode.Q)) movement += -1;
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.A)) movement += -1;
         if (Input.GetKey(KeyCode.D)) movement += 1;
         if (movement != 0)
         {

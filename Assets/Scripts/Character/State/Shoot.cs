@@ -11,7 +11,7 @@ public class Shoot : State
 
     public Shoot(Controller character) : base(character)
     {
-
+        //character.source.PlayOneShot(character.viser);
         character.click = true;
         character.pointer.SetActive(true);
         CreateLine();
@@ -57,6 +57,7 @@ public class Shoot : State
         character.activeState = new Iddle(character);
         GameObject.Destroy(this.line);
         character.cinder.GetComponent<Rigidbody2D>().AddForce(direction * STRENGHT);
+        character.source.PlayOneShot(character.tirer,2);
     }
     public override void fall() { }
 

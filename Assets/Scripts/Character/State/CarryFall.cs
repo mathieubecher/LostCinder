@@ -12,7 +12,11 @@ public class CarryFall : Fall
     public override void Update()
     {
         carryCinder();
-        if (character.ground) character.activeState = new Carry(character);
+        if (character.ground)
+        {
+            character.source.PlayOneShot(character.atterissage, 1);
+            character.activeState = new Carry(character);
+        }
         character.rigidbody.velocity = new Vector3(MovementCinder(MovementJump(character.movement * character.speed)), character.rigidbody.velocity.y);
     }
     public override string GetIdentifiant()

@@ -7,7 +7,7 @@ public class Jump : State
     private bool beginjump = false;
     public Jump(Controller character) : base(character)
     {
-        
+        character.source.PlayOneShot(character.saut, 0.5f);
         character.gameObject.layer = 9;
         character.rigidbody.AddForce(character.transform.up * 450);
     }

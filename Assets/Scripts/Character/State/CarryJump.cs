@@ -7,6 +7,7 @@ public class CarryJump : Jump
     private bool beginjump = false;
     public CarryJump(Controller character) : base(character)
     {
+        character.source.PlayOneShot(character.saut, 0.5f);
         character.stateName.text = GetIdentifiant() + " Jump";
     }
     public override string GetIdentifiant()

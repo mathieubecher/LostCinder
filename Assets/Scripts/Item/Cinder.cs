@@ -9,7 +9,7 @@ public class Cinder : Item
     // Start is called before the first frame update
     protected override void Start()
     {
-        UpdateSize();
+        base.Start();
         weight = P1;
     }
 

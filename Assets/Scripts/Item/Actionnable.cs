@@ -80,7 +80,6 @@ public class Actionnable : MonoBehaviour
         float end = 1;
         float value = ((timer<=time)?timer:Math.Abs(2*time-timer))/time;
         if (linear) return value;
-        Debug.Log("value " + value);
         value /= .5f;
         end -= start;
         if (value < 1) return end * 0.5f * value * value + start;
