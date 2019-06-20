@@ -19,7 +19,7 @@ public class Hold : State
             
             Vector3 velocityCinder = character.pushCinder.GetComponent<Rigidbody2D>().velocity;
             if (Math.Abs(velocityCinder.x ) < Math.Abs(MovementPush(character.movement * character.speed))*0.5f) {
-                velocityCinder.x += MovementPush(character.movement * character.speed);
+                velocityCinder.x = MovementPush(character.movement * character.speed);
                 character.pushCinder.GetComponent<Rigidbody2D>().velocity = velocityCinder;
             }
             character.transform.position = new Vector3(character.pushCinder.transform.position.x + ecart, character.transform.position.y);
