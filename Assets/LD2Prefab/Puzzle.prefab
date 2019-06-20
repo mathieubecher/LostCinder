@@ -1438,7 +1438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7630301583683827724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.05, y: -2.23, z: 0}
+  m_LocalPosition: {x: 3.58, y: -0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7630301584173027599}
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296115436736cca46b9cb1c421fd56c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: -1
+  id: 3
   character: {fileID: 0}
   cinder: {fileID: 0}
   progress: {fileID: 7630301584173027596}

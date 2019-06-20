@@ -23,6 +23,7 @@ public class Controller : MonoBehaviour
     
     public Transform P1pos;
     public Transform P2pos;
+    public Transform ShootPos;
     public Item cinder;
     public Item pushCinder;
     public float distancePush=0;

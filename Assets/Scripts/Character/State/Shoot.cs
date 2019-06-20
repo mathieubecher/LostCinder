@@ -32,6 +32,12 @@ public class Shoot : State
         carryCinder();
         UpdatePointerPos();
     }
+    public override void carryCinder()
+    {
+        Vector3 direction = character.ShootPos.transform.localPosition;
+        if (character.GetComponent<SpriteRenderer>().flipX) direction.x *= -1;
+        character.cinder.transform.position = direction + character.transform.position;
+    }
 
     public void UpdatePointerPos()
     {
