@@ -311,9 +311,9 @@ GameObject:
   - component: {fileID: 94443168}
   - component: {fileID: 94443167}
   - component: {fileID: 94443166}
-  - component: {fileID: 94443165}
   - component: {fileID: 94443164}
   - component: {fileID: 94443163}
+  - component: {fileID: 94443165}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -338,7 +338,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3703613, y: 3.5}
+    oldSize: {x: 0.5, y: 1.02}
     newSize: {x: 0.5, y: 1.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
