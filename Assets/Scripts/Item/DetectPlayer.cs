@@ -22,15 +22,22 @@ public class DetectPlayer : MonoBehaviour
     {
         if(parent.weight < Item.P3 && parent.character == null) { 
             parent.character = other.gameObject.GetComponent(typeof(Controller)) as Controller;
-            if (parent.character.cinder == null)
+            try
             {
-                parent.character.cinder = parent;
-                parent.detect = true;
+                if (parent.character.cinder == null)
+                {
+                    parent.character.cinder = parent;
+                    parent.detect = true;
+                }
+                else
+                {
+                    parent.character = null;
+                    Debug.Log("ça sort");
+                }
             }
-            else
+            catch
             {
-                parent.character = null;
-                Debug.Log("ça sort");
+                Debug.Log(parent.character);
             }
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarryJump : Jump
 {
+    private bool beginjump = false;
     public CarryJump(Controller character) : base(character)
     {
         character.stateName.text = GetIdentifiant() + " Jump";
@@ -17,7 +18,8 @@ public class CarryJump : Jump
     public override void Update()
     {
         carryCinder();
-        if (character.ground && character.rigidbody.velocity.y <= 0) character.activeState = new Carry(character);
+        if (!beginjump && character.rigidbody.velocity.y > 0) beginjump = true;
+        if (beginjump && character.ground && character.rigidbody.velocity.y <= 0)  character.activeState = new Carry(character);
         character.rigidbody.velocity = new Vector3(MovementCinder(MovementJump(character.movement * character.speed)), character.rigidbody.velocity.y);
     }
     public override void fall() { character.activeState = new CarryFall(character); }
