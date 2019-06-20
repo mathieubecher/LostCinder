@@ -177,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445611254535429435}
   - component: {fileID: 5060733845973316051}
+  - component: {fileID: 1538426002013578634}
   m_Layer: 0
   m_Name: RoueDentee
   m_TagString: Untagged
@@ -192,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3798960506498317241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.07402, y: -4.610201, z: 5}
+  m_LocalPosition: {x: 17.07402, y: -4.610201, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -246,6 +247,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1538426002013578634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798960506498317241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa85bd0bd4da9847b949f95fc6abfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginAngle: 0
+  endAngle: -360
+  beginPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  time: 5
+  timer: 0
+  begin: 1
+  revertable: 0
+  chain: 1
+  linear: 1
+  action: {fileID: 0}
 --- !u!1 &4550094196320270455
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4550094196320270455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.209991, y: -2.7399998, z: 5}
+  m_LocalPosition: {x: 14.209991, y: -2.7399998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -350,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5175120274266135676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.0099945, y: -4.75, z: 5}
+  m_LocalPosition: {x: 15.0099945, y: -4.75, z: 0}
   m_LocalScale: {x: 0.756, y: 0.756, z: 0.756}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -429,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5561660174426976023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.540665, y: -2.2333274, z: 5}
+  m_LocalPosition: {x: 16.540665, y: -2.2333274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -508,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6025153751578798541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.87854, y: -0.8790345, z: 5}
+  m_LocalPosition: {x: 16.87854, y: -0.8790345, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -572,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6123726799690145746}
   - component: {fileID: 6549823295636751326}
+  - component: {fileID: 503461604174817731}
   m_Layer: 0
   m_Name: Moulin_Aile
   m_TagString: Untagged
@@ -587,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7421123691497110906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.660004, y: 1.4982271, z: 5}
+  m_LocalPosition: {x: 16.660004, y: 1.4982271, z: 0}
   m_LocalScale: {x: 0.824, y: 0.824, z: 0.824}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
@@ -641,6 +666,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &503461604174817731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421123691497110906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60f69407c6c8864d81e528713c36a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginAngle: 0
+  endAngle: 360
+  beginPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  time: 10
+  timer: 0
+  begin: 1
+  revertable: 0
+  chain: 1
+  linear: 1
 --- !u!1 &8781405496675562860
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8781405496675562860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.080002, y: -1.44, z: 5}
+  m_LocalPosition: {x: 17.080002, y: -1.44, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3570004505210995640}
