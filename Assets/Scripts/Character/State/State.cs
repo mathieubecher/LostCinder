@@ -26,7 +26,47 @@ public class State
         character.cinder.transform.position = direction+character.transform.position;
     }
 
+    public void SetAnim()
+    {
+        // 0 Iddle
+        // 1 Move
+        // 2 Jump
+        // 3 Fall
+        // 4 Carry
+        // 5 CarryJump
+        // 6 CarryFall
+        // 7 Shoot
 
+
+        int value = 0;
+        switch (GetIdentifiant())
+        {
+            case "Iddle":
+                value = 0;
+                break;
+            case "Move": value = 1; break;
+            case "Jump":
+                value = 2;
+                break;
+            case "Fall":
+                value = 3;
+                break;
+            case "Carry":
+                value = 4;
+                break;
+            case "Shoot":
+                value = 7;
+                break;
+            case "Squat":
+                value = 8;
+                break;
+            case "Hold":
+                value = 9;
+                break;
+
+        }
+        character.animator.SetInteger("state",value);
+    }
     protected Controller character;
 
     public State(Controller character)

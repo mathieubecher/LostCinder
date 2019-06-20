@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump : State
 {
+    private bool beginjump = false;
     public Jump(Controller character) : base(character)
     {
         
@@ -18,7 +19,8 @@ public class Jump : State
 
     public override void Update()
     {
-        if (character.ground && character.rigidbody.velocity.y <= 0) character.activeState = new Iddle(character);
+        if (!beginjump && character.rigidbody.velocity.y > 0) beginjump = true;
+        if (beginjump && character.ground && character.rigidbody.velocity.y <= 0) character.activeState = new Iddle(character);
         character.rigidbody.velocity = new Vector3(MovementJump(character.movement * character.speed), character.rigidbody.velocity.y);
     }
 }

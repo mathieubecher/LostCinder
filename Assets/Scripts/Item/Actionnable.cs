@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Actionnable : MonoBehaviour
 {
     public float beginAngle = 0;
@@ -20,12 +20,26 @@ public class Actionnable : MonoBehaviour
     {
         beginAngle += transform.eulerAngles.z;
         endAngle += transform.eulerAngles.z;
+        if (begin)
+        {
+            beginPos += transform.position;
+            endPos += transform.position;
+        }
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (time > 0) { 
+
+        if(revertable && chain && begin)
+        {
+            timer +=Time.deltaTime;
+            timer = timer % (time * 2);
+            float progress = AnimProgressChain();
+            transform.position = Vector3.Lerp(beginPos, endPos, progress);
+            transform.eulerAngles = new Vector3(0, 0, beginAngle + (endAngle - beginAngle) * progress);
+        }
+        else if (time > 0) { 
             if (timer <= time || chain)
             {
                 if (begin) { 
@@ -54,6 +68,19 @@ public class Actionnable : MonoBehaviour
         float value = timer / time;
         if (linear) return value;
 
+        value /= .5f;
+        end -= start;
+        if (value < 1) return end * 0.5f * value * value + start;
+        value--;
+        return -end * 0.5f * (value * (value - 2) - 1) + start;
+    }
+    public virtual float AnimProgressChain()
+    {
+        float start = 0;
+        float end = 1;
+        float value = ((timer<=time)?timer:Math.Abs(2*time-timer))/time;
+        if (linear) return value;
+        Debug.Log("value " + value);
         value /= .5f;
         end -= start;
         if (value < 1) return end * 0.5f * value * value + start;
