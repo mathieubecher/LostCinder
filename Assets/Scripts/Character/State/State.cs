@@ -19,7 +19,7 @@ public class State
     {
         return movement / (1 + character.pushCinder.weight);
     }
-    public void carryCinder()
+    public virtual void carryCinder()
     {
         Vector3 direction = (character.cinder.weight>= Item.P2)?character.P2pos.transform.localPosition:character.P1pos.transform.localPosition;
         if (character.GetComponent<SpriteRenderer>().flipX) direction.x *= -1;

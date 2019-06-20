@@ -23,6 +23,7 @@ public class Controller : MonoBehaviour
     
     public Transform P1pos;
     public Transform P2pos;
+    public Transform ShootPos;
     public Item cinder;
     public Item pushCinder;
     public float distancePush=0;
@@ -54,6 +55,10 @@ public class Controller : MonoBehaviour
         }
         activeState.Update();
         activeState.SetAnim();
+        if(cinder != null)
+        {
+            animator.SetInteger("size", (cinder.weight < Item.P2) ? 1 : (cinder.weight < Item.P3) ? 2:3);
+        }
 
         if (cinder != null && cinder.character == null)
         {
@@ -74,7 +79,11 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) movement += 1;
         if (movement != 0)
         {
-            GetComponent<SpriteRenderer>().flipX = movement < 0;
+            if(activeState.GetIdentifiant() == "Hold")
+            {
+                animator.SetBool("push", (GetComponent<SpriteRenderer>().flipX && movement < 0) || (!GetComponent<SpriteRenderer>().flipX && movement > 0));
+            }
+            else GetComponent<SpriteRenderer>().flipX = movement < 0;
         }
         if (Input.GetKey(KeyCode.Space) && !space)
         {

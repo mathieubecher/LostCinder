@@ -15,7 +15,7 @@ public class DetectPlayer : MonoBehaviour
     void Update()
     {
         if(parent.character != null)
-            parent.detect = parent.character.activeState.GetIdentifiant() == "Carry" || GetComponent<Collider2D>().Distance(parent.character.GetComponent<Collider2D>()).distance < 0;
+            parent.detect = parent.character.activeState.GetIdentifiant() == "Shoot" || parent.character.activeState.GetIdentifiant() == "Carry" || GetComponent<Collider2D>().Distance(parent.character.GetComponent<Collider2D>()).distance < 0;
             
     }
     void OnTriggerEnter2D(Collider2D other)
