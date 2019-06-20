@@ -20,6 +20,11 @@ public class Actionnable : MonoBehaviour
     {
         beginAngle += transform.eulerAngles.z;
         endAngle += transform.eulerAngles.z;
+        if (begin)
+        {
+            beginPos += transform.position;
+            endPos += transform.position;
+        }
     }
 
     // Update is called once per frame
