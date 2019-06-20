@@ -53,6 +53,7 @@ public class Controller : MonoBehaviour
             pushCinder = null;
         }
         activeState.Update();
+        activeState.SetAnim();
 
         if (cinder != null && cinder.character == null)
         {
