@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296115436736cca46b9cb1c421fd56c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: -1
+  id: 4
   character: {fileID: 0}
   cinder: {fileID: 0}
   progress: {fileID: 6821131399398472292}
