@@ -365,6 +365,7 @@ MonoBehaviour:
     m_Bits: 1024
   source: {fileID: 0}
   activate: {fileID: 0}
+  value: 1
 --- !u!1 &5637315860330121129
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +755,7 @@ MonoBehaviour:
   chain: 0
   linear: 0
   action: {fileID: 0}
-  activate: {fileID: 8300000, guid: 2c9b81d2aeeab6d4b8f57e21c2ddfc33, type: 3}
+  activate: {fileID: 8300000, guid: f16312cbfcc7a344c80ddd28f1ef0c42, type: 3}
 --- !u!82 &7888648352302617027
 AudioSource:
   m_ObjectHideFlags: 0

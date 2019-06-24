@@ -15,8 +15,7 @@ public class Hold : State
     {
 
         if(character.pushCinder != null && Math.Abs(character.pushCinder.GetComponent<Rigidbody2D>().velocity.x) < MovementPush(character.speed)*3) {
-            Debug.Log(MovementPush(character.speed) + " " + Math.Abs(character.pushCinder.GetComponent<Rigidbody2D>().velocity.x)+ " " + character.movement);
-            
+
             Vector3 velocityCinder = character.pushCinder.GetComponent<Rigidbody2D>().velocity;
             if (Math.Abs(velocityCinder.x ) < Math.Abs(MovementPush(character.movement * character.speed))*0.5f) {
                 velocityCinder.x = MovementPush(character.movement * character.speed);

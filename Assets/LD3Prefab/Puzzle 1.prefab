@@ -48,8 +48,8 @@ MonoBehaviour:
   parent: {fileID: 2854795603641806021}
   begin: {fileID: 2854795603472250871}
   end: {fileID: 2854795603386918045}
-  beginWeight: 1.5
-  endWeight: 2
+  beginWeight: 1.2
+  endWeight: 1.2
   progress: 0
   progressDirection: 0
 --- !u!1 &2854795603386918044
@@ -796,6 +796,9 @@ MonoBehaviour:
   detector:
     serializedVersion: 2
     m_Bits: 768
+  source: {fileID: 0}
+  activate: {fileID: 0}
+  value: 1
 --- !u!61 &5069156815906523719
 BoxCollider2D:
   m_ObjectHideFlags: 0

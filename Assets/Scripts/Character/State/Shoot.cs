@@ -11,7 +11,7 @@ public class Shoot : State
 
     public Shoot(Controller character) : base(character)
     {
-        //character.source.PlayOneShot(character.viser);
+        character.source.PlayOneShot(character.viser);
         character.click = true;
         character.pointer.SetActive(true);
         CreateLine();
